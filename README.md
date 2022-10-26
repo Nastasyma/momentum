@@ -1,2 +1,1 @@
-# momentum
-rs-school task stage0
+# stage1-tasks
