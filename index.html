@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="assets/favicon.ico" rel="shortcut icon" />
+  <link rel="stylesheet" href="css/owfont-regular.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>momentum</title>
+</head>
+<body>
+  <div class="body_wrapper">
+    
+    <div class="body_opacity_popup"></div>
+    <header class="header">
+      <div class="player">
+        <div class="player_wrapper">
+        <div class="player_info" >
+          <div class="player-controls">
+            <button class="play-prev player-icon"></button>
+            <button class="play player-icon"></button>
+            <button class="play-next player-icon"></button>
+          </div>
+            <div class="volume_container">
+              <button class="volume_icon"></button>
+              <input
+                type="range"
+                name="volume"
+                id="audioVolume"
+                value="30"
+                max="100"
+              />
+            </div>
+        </div>
+        <div class="song_info">
+          <div class="song_name">
+            <span class="song_name_title">Aqua Caelestis</span>
+          </div>
+          <div class="progress_container">
+            <input
+              type="range"
+              name="audio_progress"
+              id="audioProgress"
+              min="0"
+              max="100"
+              value="0"
+            />
+          </div>
+          <div class="song_duration">
+            <span class="song_current_time">0:00</span>
+            <span>/</span>
+            <span class="song_duration_time">0:39</span>
+          </div>
+        </div>
+        </div>
+        <ul class="play-list"></ul>
+      </div>
+      <div class="weather">
+        <input type="text" class="city" placeholder="[Enter city]"/>
+        <div class="description-container">
+          <i class="weather-icon owf"></i>
+          <span class="temperature"></span>
+        </div>
+        <div class="weather-error"></div>
+        <span class="weather-description"></span>
+        <span class="humidity"></span>
+        <span class="speedWind"></span>
+      </div>
+    </header>
+    <main class="main">
+      <div class="slider-icons">
+        <button class="slide-prev slider-icon"></button>
+        <button class="slide-next slider-icon"></button>
+      </div>
+      <div class="time"></div>
+      <div class="date"></div>
+      <div class="greeting-container">
+        <span class="greeting"></span>
+        <div class="name_wrapper">
+          <input type="text" class="name" maxlength="40" placeholder="[Enter your name]"/>
+          <span class="name_copy"></span>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="quote_wrapper">
+        <button class="change-quote"></button>
+        <div>
+          <div class="quote"></div>
+          <div class="author"></div>
+        </div>
+      </div>
+      <div class="footer_bottom">
+        <div class="settings_wrapper">
+          <div class="settings_btn"></div>
+          <div class="settings_menu">
+            <span class="settings_title"><b>Settings</b></span>
+            <div class="settings_item change_language">
+              <span class="item_title lang_title">Language</span>
+              <div class="item_wrapper" >
+                <p class="en_title">English</p>
+                <div class="switch_wrapper">
+                  <input type="radio" class="switch" name="language" id="en" value="en" checked>
+                  <label for="en"></label>
+                </div>
+              </div>
+              <div class="item_wrapper">
+                <p class="ru_title">Russian</p>
+                <div class="switch_wrapper">
+                  <input type="radio" class="switch" name="language" id="ru" value="ru">
+                  <label for="ru"></label>  
+                </div>
+              </div>
+            </div>
+            <div class="settings_item change_widget">
+              <span class="item_title widget_title">Widgets</span>
+              <div class="item_wrapper" >
+                <p class="time_title">Time</p>
+                <div class="switch_wrapper">
+                  <input type="checkbox" class="switch" name="widget" id="time" value="time" checked>
+                  <label for="time"></label>
+                </div>
+              </div>
+              <div class="item_wrapper">
+                <p class="date_title">Date</p>
+                <div class="switch_wrapper">
+                  <input type="checkbox" class="switch" name="widget" id="date" value="date" checked>
+                  <label for="date"></label>  
+                </div>
+              </div>
+              <div class="item_wrapper" >
+                <p class="weather_title">Weather</p>
+                <div class="switch_wrapper">
+                  <input type="checkbox" class="switch" name="widget" id="weather" value="weather" checked>
+                  <label for="weather"></label>
+                </div>
+              </div>
+              <div class="item_wrapper" >
+                <p class="greeting_title">Greeting</p>
+                <div class="switch_wrapper">
+                  <input type="checkbox" class="switch" name="widget" id="greeting" value="greeting-container" checked>
+                  <label for="greeting"></label>
+                </div>
+              </div>
+              <div class="item_wrapper" >
+                <p class="quote_title">Quote</p>
+                <div class="switch_wrapper">
+                  <input type="checkbox" class="switch" name="widget" id="quote" value="quote_wrapper" checked>
+                  <label for="quote"></label>
+                </div>
+              </div>
+              <div class="item_wrapper" >
+                <p class="player_title">Audio player</p>
+                <div class="switch_wrapper">
+                  <input type="checkbox" class="switch" name="widget" id="audio_player" value="player" checked>
+                  <label for="audio_player"></label>
+                </div>
+              </div>
+              <div class="item_wrapper" >
+                <p class="logo_title">Logo</p>
+                <div class="switch_wrapper">
+                  <input type="checkbox" class="switch" name="widget" id="logo" value="my_page" checked>
+                  <label for="logo"></label>
+                </div>
+              </div>
+              <div class="item_wrapper" >
+                <p class="todo_title">ToDo List</p>
+                <div class="switch_wrapper">
+                  <input type="checkbox" class="switch" name="widget" id="todo" value="todo_wrapper" checked>
+                  <label for="todo"></label>
+                </div>
+              </div>
+            </div>
+            <div class="settings_item change_bg">
+              <span class="item_title gallery_title">Background image</span>
+              <div class="item_wrapper" >
+                <p class="item_text">GitHub</p>
+                <div class="switch_wrapper">
+                  <input type="radio" class="switch" name="gallery" id="github" value="github" checked>
+                  <label for="github"></label>
+                </div>
+              </div>
+              <div class="item_wrapper" >
+                <p class="item_text">Unsplash API</p>
+                <div class="switch_wrapper">
+                  <input type="radio" class="switch" name="gallery" id="unsplashApi" value="unsplashApi">
+                  <label for="unsplashApi"></label>
+                </div>
+              </div>
+              <div class="item_wrapper" >
+                <p class="item_text">Flickr API</p>
+                <div class="switch_wrapper">
+                  <input type="radio" class="switch" name="gallery" id="flickrApi" value="flickrApi">
+                  <label for="flickrApi"></label>
+                </div>
+              </div>
+              <input type="text" class="bg_tags" disabled="disabled" placeholder="Select theme..."/>
+            </div>
+          </div>
+        </div>
+        <div class="my_page">
+          <a href="https://github.com/Nastasyma"><img src="assets/svg/github_logo.svg"
+              class="footer-link" alt="gh_logo"></a>
+          <div class="footer-text"><b>© 2022</b></div>
+          <a href="https://rs.school/js-stage0/"><img src="assets/svg/rs_school_js_logo.svg" class="rsschool"
+              alt="rs_school_js"></a>
+        </div>
+        <div class="todo_wrapper">
+          <div class="todo_btn"></div>
+          <div class="todo_widget">
+            <div class="todo_title_wrapper">
+              <div class="todo_delete"></div>
+              <div class="todo_text">Todo list</div>
+              <div class="todo_close"></div>
+            </div>
+            <div class="todo_container">
+              <form class="todo_item" onsubmit='return false'>
+                <input type="text" class="todo_addtask" id="todo_input" placeholder="Add new task...">
+                <button type="submit" id="add" class="add_btn">Add</button>
+              </form>
+              <ul class="tasks">
+                <li class="tasks_item">
+                  <div class="task_container">
+                    <span class="check_task"></span>
+                    <p class="my_task">Check mail</p>
+                  </div>
+                  <button class="cancel_icon"></button>
+                </li>
+                <li class="tasks_item">
+                  <div class="task_container">
+                    <span class="check_task"></span>
+                    <p class="my_task">Buy plane tickets</p>
+                  </div>
+                  <button class="cancel_icon"></button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </footer>
+  </div>
+  <script src="js/index.js"></script>
+  <script src="js/time.js" type="module"></script>
+  <script src="js/bgSlider.js" type="module"></script>
+  <script src="js/weather.js" type="module"></script>
+  <script src="js/quotes.js" type="module"></script>
+  <script src="js/audioPlayer.js" type="module"></script>
+  <script src="js/todo.js" type="module"></script>
+  <script src="js/settings.js" type="module"></script>
+</body>
+</html>
